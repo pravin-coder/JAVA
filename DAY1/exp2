@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class exp2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get the user name and re-entered user name from the user
+        System.out.print("Enter the user name: ");
+        String userName = scanner.nextLine();
+
+        System.out.print("Reenter the user name: ");
+        String reenteredUserName = scanner.nextLine();
+
+        // Check if the entered user names match
+        if (isValidUsername(userName, reenteredUserName)) {
+            System.out.println("User name is Valid");
+        } else {
+            System.out.println("User name is Invalid");
+        }
+    }
+
+    private static boolean isValidUsername(String userName, String reenteredUserName) {
+        // Check if the entered user names are not null and match
+        return userName != null && reenteredUserName != null && userName.equals(reenteredUserName);
+    }
+}
